@@ -1,0 +1,830 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/21/2016 10:10:27 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WIN-SERVAPP-01"
+  DTS:CreatorName="DGAC\richard.martinezo"
+  DTS:DTSID="{9E5B1913-7714-445A-8167-2E6F17AD3414}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2344.23"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Formularios_Vista_Aeropuertos"
+  DTS:PackageType="5"
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{F5042F4A-6931-401D-9C40-85BBDA8AF998}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WIN-SQLSERV-01.iFIS.adminsql]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{620EB316-E0CB-4A1F-8A36-52788EAEE66A}"
+      DTS:ObjectName="WIN-SQLSERV-01.iFIS.adminsql">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=WIN-SQLSERV-01;User ID=adminsql;Initial Catalog=iFIS;Application Name=SSIS-Formularios_Vista_Aeropuertos-{620EB316-E0CB-4A1F-8A36-52788EAEE66A}WIN-SQLSERV-01.iFIS.adminsql;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3wLCRiSjGUy393IR9B83bgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABSEdyX79aPMFxRIn3vxYqWAAAAAASAAACgAAAAEAAAAEdhpipnrcCP2ylh42d1aO0YAAAAOFK641xQs7MDRZs7wD7fGWFH2NenzQHCFAAAAL+A6ohV6pw5jana6ABIwVLPz4FB</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WIN-SQLSERV-02.SSP_BI1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{96BD9C28-2B93-4A40-B4A5-2EF6A1CD7233}"
+      DTS:ObjectName="WIN-SQLSERV-02.SSP_BI1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=WIN-SQLSERV-02;User ID=adminsql;Initial Catalog=SSP_BI;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3wLCRiSjGUy393IR9B83bgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAADe+HiVkJ3Is+EQFs78P337AAAAAASAAACgAAAAEAAAAIhlSCbAoxD+KdIhUWsuOyoYAAAARrrjnEkj5GavHCvXTpCuiWkWyCB0SBLrFAAAAAQfEOqn2sAfPNFY2B8USHdYPcpP</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WIN-SQLSERV-02.SSP_BI2]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{5358EE3C-7E81-41A5-86D1-6D4CD3859E6A}"
+      DTS:ObjectName="WIN-SQLSERV-02.SSP_BI2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=WIN-SQLSERV-02;User ID=adminsql;Initial Catalog=SSP_BI;Application Name=SSIS-Formularios_Vista_Aeropuertos-{5358EE3C-7E81-41A5-86D1-6D4CD3859E6A}WIN-SQLSERV-02.SSP_BI2;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA3wLCRiSjGUy393IR9B83bgAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAA2wj4wZdQeZsJSYkEIi8AjAAAAAASAAACgAAAAEAAAABrIPSnqoso1IGUj10rF+6sYAAAALRYe0QN7bQbii0JspqrZmwfj3eaEHCzhFAAAAMuYS4G+q1DQqZ1UorcsFKMU+/9A</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{D956E72C-4D83-4E97-BD58-9429E0C37926}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{96BD9C28-2B93-4A40-B4A5-2EF6A1CD7233}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="delete from [SSP_BI].[dbo].[Vista_aeropuertos]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Tarea Flujo de datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{2F9BB0F9-1D0E-479C-A95C-DD1617422F66}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tarea Flujo de datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tarea Flujo de datos\ADO NET Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Loads data into an ADO.NET-compliant database that uses a database table or view. Load data into a new or existing table. For example, use an ADO.NET provider for ODBC to load data into an ODBC destination."
+              name="ADO NET Destination"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The Destination database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Vista_aeropuertos"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows per batch. The default is 0 which uses the same size as SSIS internal buffer. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out. A value of 0 indicates infinite time-out. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether to use the SqlBulkCopy interface to improve the performance of bulk insert operations. Only certain providers support this interface."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\ADO NET Destination.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[WIN-SQLSERV-02.SSP_BI2]"
+                  connectionManagerRefId="Package.ConnectionManagers[WIN-SQLSERV-02.SSP_BI2]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ADO NET Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[CIUDAD]"
+                      cachedDataType="wstr"
+                      cachedLength="130"
+                      cachedName="CIUDAD"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ciudad]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[CIUDAD]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PAIS]"
+                      cachedDataType="wstr"
+                      cachedLength="130"
+                      cachedName="PAIS"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[pais]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PAIS]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[AEROPUERTO]"
+                      cachedDataType="wstr"
+                      cachedLength="160"
+                      cachedName="AEROPUERTO"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[aeropuerto]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[AEROPUERTO]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[latitud]"
+                      cachedDataType="r8"
+                      cachedName="latitud"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[latitud]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[latitud]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[longitud]"
+                      cachedDataType="r8"
+                      cachedName="longitud"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[longitud]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[longitud]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[aerodromo]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="aerodromo"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[aerodromo]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[aerodromo]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[verificable]"
+                      cachedDataType="bool"
+                      cachedName="verificable"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[verificable]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[verificable]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[AEROP_DESCRIP]"
+                      cachedDataType="wstr"
+                      cachedLength="394"
+                      cachedName="AEROP_DESCRIP"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[aerop_descrip]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[AEROP_DESCRIP]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PUNTORUTA_IATA]"
+                      cachedDataType="wstr"
+                      cachedLength="5"
+                      cachedName="PUNTORUTA_IATA"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[punto_ruta_iata]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PUNTORUTA_IATA]" />
+                    <inputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].Columns[PUNTORUTA_OACI]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="PUNTORUTA_OACI"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[punto_ruta_oaci]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PUNTORUTA_OACI]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[ciudad]"
+                      dataType="wstr"
+                      length="200"
+                      name="ciudad" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[pais]"
+                      dataType="wstr"
+                      length="200"
+                      name="pais" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[aeropuerto]"
+                      dataType="wstr"
+                      length="2147483647"
+                      name="aeropuerto" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[aerodromo]"
+                      dataType="wstr"
+                      length="200"
+                      name="aerodromo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[punto_ruta_oaci]"
+                      dataType="wstr"
+                      length="200"
+                      name="punto_ruta_oaci" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[punto_ruta_iata]"
+                      dataType="wstr"
+                      length="200"
+                      name="punto_ruta_iata" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[aerop_descrip]"
+                      dataType="wstr"
+                      length="200"
+                      name="aerop_descrip" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[latitud]"
+                      dataType="r8"
+                      name="latitud" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[longitud]"
+                      dataType="r8"
+                      name="longitud" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input].ExternalColumns[verificable]"
+                      dataType="bool"
+                      name="verificable" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\ADO NET Destination.Outputs[ADO NET Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ADO NET Destination Error Output"
+                  synchronousInputId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Destination.Outputs[ADO NET Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tarea Flujo de datos\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."Vista_aeropuertos"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tarea Flujo de datos\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[WIN-SQLSERV-01.iFIS.adminsql]"
+                  connectionManagerRefId="Package.ConnectionManagers[WIN-SQLSERV-01.iFIS.adminsql]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[CIUDAD]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CIUDAD]"
+                      length="130"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[CIUDAD]"
+                      name="CIUDAD"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PAIS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PAIS]"
+                      length="130"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PAIS]"
+                      name="PAIS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[AEROPUERTO]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AEROPUERTO]"
+                      length="160"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[AEROPUERTO]"
+                      name="AEROPUERTO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[latitud]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[latitud]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[latitud]"
+                      name="latitud"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[longitud]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[longitud]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[longitud]"
+                      name="longitud"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[observaciones]"
+                      dataType="nText"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[observaciones]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[observaciones]"
+                      name="observaciones"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[aerodromo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[aerodromo]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[aerodromo]"
+                      name="aerodromo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[elevacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[elevacion]"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[elevacion]"
+                      name="elevacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PUNTORUTA_OACI]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PUNTORUTA_OACI]"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PUNTORUTA_OACI]"
+                      name="PUNTORUTA_OACI"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PUNTORUTA_IATA]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PUNTORUTA_IATA]"
+                      length="5"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[PUNTORUTA_IATA]"
+                      name="PUNTORUTA_IATA"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[verificable]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[verificable]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[verificable]"
+                      name="verificable"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[lat]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[lat]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[lat]"
+                      name="lat"
+                      precision="18"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[lon]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[lon]"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[lon]"
+                      name="lon"
+                      precision="18"
+                      scale="7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[AEROP_DESCRIP]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AEROP_DESCRIP]"
+                      length="394"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[AEROP_DESCRIP]"
+                      name="AEROP_DESCRIP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[region]"
+                      length="5"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].Columns[region]"
+                      name="region"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[CIUDAD]"
+                      dataType="wstr"
+                      length="130"
+                      name="CIUDAD" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PAIS]"
+                      dataType="wstr"
+                      length="130"
+                      name="PAIS" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AEROPUERTO]"
+                      dataType="wstr"
+                      length="160"
+                      name="AEROPUERTO" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[latitud]"
+                      dataType="r8"
+                      name="latitud" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[longitud]"
+                      dataType="r8"
+                      name="longitud" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[observaciones]"
+                      dataType="nText"
+                      name="observaciones" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[aerodromo]"
+                      dataType="wstr"
+                      length="255"
+                      name="aerodromo" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[elevacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="elevacion" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PUNTORUTA_OACI]"
+                      dataType="wstr"
+                      length="100"
+                      name="PUNTORUTA_OACI" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[PUNTORUTA_IATA]"
+                      dataType="wstr"
+                      length="5"
+                      name="PUNTORUTA_IATA" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[verificable]"
+                      dataType="bool"
+                      name="verificable" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[lat]"
+                      dataType="numeric"
+                      name="lat"
+                      precision="18"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[lon]"
+                      dataType="numeric"
+                      name="lon"
+                      precision="18"
+                      scale="7" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[AEROP_DESCRIP]"
+                      dataType="wstr"
+                      length="394"
+                      name="AEROP_DESCRIP" />
+                    <externalMetadataColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[region]"
+                      dataType="wstr"
+                      length="5"
+                      name="region" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CIUDAD]"
+                      dataType="wstr"
+                      length="130"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[CIUDAD]"
+                      name="CIUDAD" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PAIS]"
+                      dataType="wstr"
+                      length="130"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PAIS]"
+                      name="PAIS" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AEROPUERTO]"
+                      dataType="wstr"
+                      length="160"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AEROPUERTO]"
+                      name="AEROPUERTO" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[latitud]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[latitud]"
+                      name="latitud" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[longitud]"
+                      dataType="r8"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[longitud]"
+                      name="longitud" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[observaciones]"
+                      dataType="nText"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[observaciones]"
+                      name="observaciones" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[aerodromo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[aerodromo]"
+                      name="aerodromo" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[elevacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[elevacion]"
+                      name="elevacion" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PUNTORUTA_OACI]"
+                      dataType="wstr"
+                      length="100"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PUNTORUTA_OACI]"
+                      name="PUNTORUTA_OACI" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PUNTORUTA_IATA]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[PUNTORUTA_IATA]"
+                      name="PUNTORUTA_IATA" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[verificable]"
+                      dataType="bool"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[verificable]"
+                      name="verificable" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[lat]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[lat]"
+                      name="lat"
+                      precision="18"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[lon]"
+                      dataType="numeric"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[lon]"
+                      name="lon"
+                      precision="18"
+                      scale="7" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AEROP_DESCRIP]"
+                      dataType="wstr"
+                      length="394"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[AEROP_DESCRIP]"
+                      name="AEROP_DESCRIP" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[region]"
+                      dataType="wstr"
+                      length="5"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[region]"
+                      name="region" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tarea Flujo de datos.Paths[ADO NET Source Output]"
+              endId="Package\Tarea Flujo de datos\ADO NET Destination.Inputs[ADO NET Destination Input]"
+              name="ADO NET Source Output"
+              startId="Package\Tarea Flujo de datos\ADO NET Source.Outputs[ADO NET Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{7B0297A8-3095-4CF9-A571-C94991C5A3DE}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Tarea Flujo de datos" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="77,48" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Tarea Flujo de datos"
+          TopLeft="95,156" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="158.5,90">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="24.5,66"
+              Start="0,0"
+              End="24.5,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="4,33" />
+                  <mssgle:LineSegment
+                    End="20.5,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="20.5,33"
+                    Point2="24.5,33"
+                    Point3="24.5,37" />
+                  <mssgle:LineSegment
+                    End="24.5,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tarea Flujo de datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Tarea Flujo de datos\ADO NET Source"
+          TopLeft="126,0" />
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Tarea Flujo de datos\ADO NET Destination"
+          TopLeft="136,98" />
+        <EdgeLayout
+          Id="Package\Tarea Flujo de datos.Paths[ADO NET Source Output]"
+          TopLeft="205,42">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.5,56"
+              Start="0,0"
+              End="20.5,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="4,28" />
+                  <mssgle:LineSegment
+                    End="16.5,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.5,28"
+                    Point2="20.5,28"
+                    Point3="20.5,32" />
+                  <mssgle:LineSegment
+                    End="20.5,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\ADO NET Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tarea Flujo de datos\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

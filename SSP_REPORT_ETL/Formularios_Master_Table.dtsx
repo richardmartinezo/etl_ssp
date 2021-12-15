@@ -1,0 +1,511 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="7/15/2016 12:29:29 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WIN-SERVAPP-01"
+  DTS:CreatorName="DGAC\richard.martinezo"
+  DTS:DTSID="{3B1DB35D-3CAF-42D1-A4CA-D835D0FB46D9}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.2344.23"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Formularios_Master_Table"
+  DTS:PackageType="5"
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{B569A313-FFBE-4709-BD5E-2F26EB13E84B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[win-sqlserv-02.SSP_BI]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{0BD88E22-5F69-43E9-B43F-504584ED37B3}"
+      DTS:ObjectName="win-sqlserv-02.SSP_BI">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=win-sqlserv-02;User ID=adminsql;Initial Catalog=SSP_BI;Provider=SQLOLEDB.1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzpYsMCF5gEirgzOElJM07AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAAAL/y97FIjVoPxErgj2MD3UAAAAAASAAACgAAAAEAAAABCCJLW5SW29kZxfg7ZC7eoYAAAA0oZ0JduXQ1gjY4whWqovqZE7laFtYAiEFAAAABrLOkw839WIOEKIyL3T5+AznqGL</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[win-sqlserv-02.SSP_BI 1]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{456C6589-C8E0-426B-8820-B349ACC4A11C}"
+      DTS:ObjectName="win-sqlserv-02.SSP_BI 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=win-sqlserv-02;User ID=adminsql;Initial Catalog=SSP_BI;Provider=SQLOLEDB.1;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzpYsMCF5gEirgzOElJM07AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABTTPG7atpQsAJ1LchTXFRUAAAAAASAAACgAAAAEAAAACx/36+RKEEDMiey2Cd6eUIYAAAABzeODplLkr3RhM3Mzs3E+FDUrA+UvwkjFAAAAIXP/kU5XRfyJ02uohJvajZ3u4Jd</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WIN-SQLSERV-02.SSP_BI1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+      DTS:ObjectName="WIN-SQLSERV-02.SSP_BI1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=WIN-SQLSERV-02;User ID=adminsql;Initial Catalog=SSP_BI;Provider=SQLNCLI11.1;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzpYsMCF5gEirgzOElJM07AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAABf9psd1CLH1Th0c5tME4CeAAAAAASAAACgAAAAEAAAANKkX4Gg/RmT+ZJR8wEcws8YAAAAB0hCqY+9AMuacQuRGYt2bBVyKQcSWUeXFAAAAHNBB7Bhdrs4lbQsthAZOf+esGZu</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WIN-SQLSERV-02.SSP_BI2]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{8BF67393-1C1C-4044-A64D-E4870DA3560E}"
+      DTS:ObjectName="WIN-SQLSERV-02.SSP_BI2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=WIN-SQLSERV-02;User ID=adminsql;Initial Catalog=SSP_BI;Application Name=SSIS-Formularios_Master_Table-{8BF67393-1C1C-4044-A64D-E4870DA3560E}WIN-SQLSERV-02.SSP_BI2;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzpYsMCF5gEirgzOElJM07AAAAAAIAAAARABUAFMAAAADZgAAwAAAABAAAACIf7wB0KxiC+vdTNuo2KQQAAAAAASAAACgAAAAEAAAAIpVEpBxsaK83HIFLrsNyRkYAAAAOP/Nos+LpBfUCnjkdk5QpgksvNFw7UBAFAAAAOnkUjqbxAVwnKZn7CoGPL2DVdDe</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute SQL Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{C4C41076-2419-419E-91F3-CD36A98B2B25}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute SQL Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="&#xA;insert into [SSP_BI].[dbo].[Reportes_SSP_Master]&#xA; (entry_id,entry_date_created,form_id , fecha_creacion, nombre_formulario)&#xA;select distinct(entry_id),entry_date_created,form_id,  date_created, formulario&#xA;from [SSP_BI].[dbo].[MySQL_Vista_SSP] mvsp where mvsp.entry_id&#xA; &gt; &#xA; (select max(entry_id) from [SSP_BI].[dbo].[Reportes_SSP_Master])&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingreso Descripcion"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{d728d4d4-ba3b-421d-a54c-05e5dc5e23ab}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingreso Descripcion"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set descripcion = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Descripci\u00f3n Narrativa&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;&#xA;)&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingreso Desde ATS"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{21bdc67d-a166-4f70-a98e-37cba42e12bb}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingreso Desde ATS"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Nombre_Unidad_ATS=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Nombre Unidad ATS&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set NV1=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;NV1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set NV2=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;NV2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set O1=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;O1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set O2=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;O2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Operador=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Operador&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Otras_Consecuencias_Vuelo=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Otras Consecuencias para el Vuelo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Otras_Danadas=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Otras Da\u00f1adas&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Otras_Golpeadas=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Otras Golpeadas&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Otros_TO=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Otros TO&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set PE_Motor_1=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;PE Motor 1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set PE_Motor_2=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;PE Motor 2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set RV1=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;RV1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set RV2=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;RV2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Servicio_ATC_Provisto=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Servicio ATC Provisto&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set STCA=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;STCA&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Tipo_Espacio_Aereo=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Tipo de Espacio A\u00e9reo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Tipo_Informacion_Trafico_Provisto=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Tipo de Informaci\u00f3n de Tr\u00e1fico Provista&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Tipo_de_Operacion=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Tipo de Operacion&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Tipo_Modulo=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Tipo\/Modelo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set V1=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;V1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set V2=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;V2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Vertical_FT=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Vertical (FT)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingreso email"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E31F5B4B-EEDB-4276-9E25-C1751B22DD99}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingreso email"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set email = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Email&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set email = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE          (etiqueta = '&quot;E-mail&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set email = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE         (etiqueta = '&quot;email&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingreso Fecha"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0f02674d-fa1c-4a58-a0f1-a2a5e17e5561}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingreso Fecha"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set fecha = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Fecha&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingreso Hasta ATC"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{e7e54341-7355-4132-898c-3d34c27159b7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingreso Hasta ATC"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set telefono = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Tel\u00e9fono&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set ubicacion = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Ubicacion&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set lugar = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Lugar&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set hora = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Hora UTC&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [01_02_Explotador] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;01\/02 Explotador&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [01_02_Explotador] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;01\/02 Explotador&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [03_04_Marca_Modelo_de_Aeronave] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;03\/04 Marca\/Modelo de Aeronave&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [05_06_Marca_Modelo_de_Motor] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;05\/06 Marca\/Modelo de Motor&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [07_Matricula_de_Aeronave] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;07 Matr\u00edcula de Aeronave&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [08_Fecha_del_Choque] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;08 Fecha del Choque&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [08_Fecha] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;08 Fecha&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [09_Hora] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;09 Hora&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [10_Condiciones_de_Luz] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;10 Condiciones de luz&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [11_12_Nombre_del_Aerodromo] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;11\/12 Nombre del Aer\u00f3dromo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [11_12_14_Aerodromo_Posicion_si_se_conoce] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;11\/12\/14 Aer\u00f3dromo\/Posici\u00f3n (si se conocen)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [13_Pista_Utilizada] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;13 Pista Utilizada&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [14_Posicion_si_fue_en_ruta] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;14 Posici\u00f3n si fue en Ruta&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [15_Altura_pies] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;15 Altura (pies)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [16_Velocidad_Indicada_nudos] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;16 Velocidad Indicada (nudos)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [17_Fase_de_vuelo] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;17 Fase de Vuelo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [37_Condiciones_del_Cielo] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;37 Condiciones del Cielo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [41_Especie_de_Ave] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;41 Especie de Ave&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [42_Observadas] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;42 Observadas&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [43_Golpeadas] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;43 Golpeadas&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [44_Tamano_de_las_Aves] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;44 Tama\u00f1o de las Aves&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [45_Se_Advirtio_del_Peligro] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;45 \u00bfSe advirti\u00f3 al piloto del peligro?&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [46_47_Observaciones] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;46\/47 Observaciones (descr\u00edbanse los da\u00f1os y las lesiones y cons\u00edgnense otros datos pertinentes)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [52_Tiempo_Aeronave_Fuera_Servicio] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;52 Tiempo que la Aeronave Estuvo Fuera de Servicio (horas)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [53_Costes_Estimado_para_Reparacion_o_Sustitucion] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;53 Coste Estimado de la Reparaci\u00f3n o Sustituci\u00f3n $E.U.A. (en miles)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [54_Otros_Costes_Estimados] = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;54 Otros Costes Estimados (por ejemplo:lucro cesante, combustible, hoteles) $E.U.A. (en miles)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set A1 = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;A1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set AD1 = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;AD1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set AD2 = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;AD2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Adjuntar_Archivo = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Adjuntar archivo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Aerodromo_Destino = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Aer\u00f3dromo de Destino&quot;') or (etiqueta = '&quot;Aerodromo de Destino&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Aerodromo_Salida = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Aer\u00f3dromo de Salida&quot;') or (etiqueta = '&quot;Aerodromo de Salida&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set AI_Motor_1 = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;AI Motor 1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set AI_Motor_2 = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;AI Motor 2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set AS1 = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;AS1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set AS2 = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;AS2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Carga_Trabajo_ATC = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Carga de Trabajo ATC&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Categoria_Vuelo = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Categoria de Vuelo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set CCO_ATC = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;CCO ATC&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Clase_de_Espacio_Aereo= (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Clase de Espacio A\u00e9reo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Condiciones_de_Luz= (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Condiciones de Luz&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Condiciones_Meteorologicas= (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Condiciones meteorol\u00f3gicas&quot;') or (etiqueta = '&quot;Condiciones Meteorologicas&quot;')  &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Condiciones_Meteorologicas_Relevantes= (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Condiciones Meteorologicas Relevantes&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set CSR1= (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;CSR1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set CSR2= (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;CSR2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Danadas=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Da\u00f1adas&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Dano_Aeronave=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Da\u00f1o Aeronave&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Fase_Vuelo=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Fase de Vuelo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Duracion_Vuelo=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Duracion del Vuelo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Fatalidad_P=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Fatalidad P&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Fatalidad_T=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Fatalidad T&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Frecuencia_RTF=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Frecuencia RTF&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Golpeados=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Golpeadas&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Graves_P=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Graves P&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Graves_T=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Graves T&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set [Horizontal_(NM)]=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Horizontal (NM)&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Jornada_Trabajo=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Jornada de Trabajo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Latitud=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Latitud&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Lic_ATC=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Lic ATC&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Longitud=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Longitud&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set M1=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;M1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set M2=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;M2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Matricula=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Matricula&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Menores_P=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Menores P&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Menores_T=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Menores t&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Modelo_Matricula=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Modelo \/ Matr\u00edcula&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set MSAW=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;MSAW&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set MSR1=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;MSR1&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set MSR2=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;MSR2&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Ninguno_P=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Ninguno P&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Ninguno_T=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Ninguno T&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Nombre_Espacio_Aereo=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Nombre Espacio A\u00e9reo&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set Nombre_Sector_ATC=(&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Nombre Sector ATC&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id)&#xA;&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingreso Nombres"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9BD0EDB0-0DAD-412E-833A-DDE2D8D5C307}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingreso Nombres"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource=" update  [SSP_BI].[dbo].[Reportes_SSP_Master] set nombre = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Nombre y Apellido&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Ingreso Ubicacion"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{9179d3e2-b6f4-40d4-8337-dfa5feb44840}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Ingreso Ubicacion"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2014; © 2014 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{CE54BA2A-5485-471F-9BC1-213E39B0312E}"
+          SQLTask:BypassPrepare="False"
+          SQLTask:SqlStatementSource="&#xA;update  [SSP_BI].[dbo].[Reportes_SSP_Master] set lugar = (&#xA;SELECT       max (valor)&#xA;FROM           [SSP_BI].[dbo].[MySQL_Vista_SSP] t1&#xA;WHERE        (etiqueta = '&quot;Ubicacion&quot;') or (etiqueta = '&quot;Lugar&quot;') &#xA;and Reportes_SSP_Master.entry_id = t1.entry_id ) &#xA;where exists (&#xA;select 1 from [SSP_BI].[dbo].[MySQL_Vista_SSP] &#xA;where [SSP_BI].[dbo].[Reportes_SSP_Master].entry_id = [SSP_BI].[dbo].[MySQL_Vista_SSP].entry_id&#xA;)&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{83AE7E19-599A-4989-AA44-5464A419772E}"
+      DTS:From="Package\Ingreso Descripcion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Ingreso email" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{A9C54110-1A50-4746-8363-4A7FA83C4FCC}"
+      DTS:From="Package\Execute SQL Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Ingreso Nombres" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{83899155-825A-416F-9C96-8DEDCE790461}"
+      DTS:From="Package\Ingreso Nombres"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Ingreso Fecha" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{1E601EFD-F384-4E01-AD48-C71452162A07}"
+      DTS:From="Package\Ingreso Fecha"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Ingreso Ubicacion" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{9E724175-201B-4BC1-99EC-C5DEDAC1FF14}"
+      DTS:From="Package\Ingreso Ubicacion"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Ingreso Descripcion" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{2E862BF9-945C-436D-AD91-5681A18DBE48}"
+      DTS:From="Package\Ingreso email"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Ingreso Hasta ATC" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{DAEFBF5B-AFCF-48AF-970A-CDC0E319BF17}"
+      DTS:From="Package\Ingreso Hasta ATC"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Ingreso Desde ATS" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="sql12">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Execute SQL Task"
+          TopLeft="312,35" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Ingreso Descripcion"
+          TopLeft="38.5,136.5" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Ingreso Desde ATS"
+          TopLeft="605.5,136.5" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Ingreso email"
+          TopLeft="208,138" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Ingreso Fecha"
+          TopLeft="765,31" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Ingreso Hasta ATC"
+          TopLeft="400.5,138.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Ingreso Nombres"
+          TopLeft="562.25,33.75" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Ingreso Ubicacion"
+          TopLeft="997.25,34.5" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="93.1666666666667,136.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="186.333333333333,1.5"
+              Start="0,0"
+              End="186.333333333333,-6">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.5"
+                    Point2="0,-22.5"
+                    Point3="4,-22.5" />
+                  <mssgle:LineSegment
+                    End="182.333333333333,-22.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="182.333333333333,-22.5"
+                    Point2="186.333333333333,-22.5"
+                    Point3="186.333333333333,-18.5" />
+                  <mssgle:LineSegment
+                    End="186.333333333333,-6" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="475,55.375">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.25,0"
+              Start="0,0"
+              End="79.75,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="79.75,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="722.25,53.375">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="42.75,0"
+              Start="0,0"
+              End="35.25,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="35.25,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="925,53.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="72.25,0"
+              Start="0,0"
+              End="64.75,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.75,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="1077.25,76.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-958.75,60"
+              Start="0,0"
+              End="-958.75,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="-4,30" />
+                  <mssgle:LineSegment
+                    End="-954.75,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-954.75,30"
+                    Point2="-958.75,30"
+                    Point3="-958.75,34" />
+                  <mssgle:LineSegment
+                    End="-958.75,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="351,159.25">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.5,0"
+              Start="0,0"
+              End="42,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="560.5,158.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45,0"
+              Start="0,0"
+              End="37.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="37.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
